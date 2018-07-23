@@ -1,3 +1,6 @@
+#IN PROGRESS - Not complete but works
+#Written by Senthil @Rats12
+#This bot plays this game for you - http://orteil.dashnet.org/cookieclicker/
 from PIL import ImageGrab
 from PIL import ImageOps
 from numpy import *
