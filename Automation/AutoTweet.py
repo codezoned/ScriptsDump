@@ -1,3 +1,4 @@
+#Written by Senthil @Rats12
 import tweepy
 from textblob import TextBlob 
 
