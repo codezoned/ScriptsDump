@@ -1,7 +1,8 @@
 import unittest
 from selenium import webdriver
 from  selenium.webdriver.support.ui import WebDriverWait
-
+#author rahul
+#It test the fb login without getting landed to captcha verification
 class FBlogintest(unittest.TestCase):
     #ADD the location of geekodriver.exe
     def setUp(self):
