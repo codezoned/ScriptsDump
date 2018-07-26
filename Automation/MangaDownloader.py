@@ -1,5 +1,5 @@
 #needs polishing
-#Downloads Manga page by page from https://www.mangapanda.com
+#Searches and downloads the top Manga result page by page from https://www.mangapanda.com
 #author- Senthil Kumar @Rats12
 
 
@@ -12,7 +12,7 @@ from selenium.webdriver.common.keys import Keys
 
 chapter=1
 page=1
-MangaName='xd'
+MangaName=''
 website='https://www.mangapanda.com' 
 
 def downloadImg(url):
