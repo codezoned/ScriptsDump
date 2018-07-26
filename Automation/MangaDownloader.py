@@ -1,9 +1,12 @@
+#needs polishing
+#Downloads Manga page by page from https://www.mangapanda.com
+#author- Senthil Kumar @Rats12
+
+
 import requests
 from bs4 import BeautifulSoup
 import os
 import selenium
-
-
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
@@ -27,7 +30,7 @@ def downloadImg(url):
                     f.write(chunk)
 
  
-driver = webdriver.Chrome(executable_path=r"chromedriver.exe")
+driver = webdriver.Chrome(executable_path=r"chromedriver.exe") #need to change to phantom.js
 driver.get("https://www.mangapanda.com/search")
 searchBar = driver.find_element_by_xpath('//*[@id="searchinput"]')
 searchBar.send_keys(MangaName)
