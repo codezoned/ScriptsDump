@@ -42,7 +42,7 @@ d=resp.text
 
 s=BeautifulSoup(d,"lxml")
 lis=s.find_all('a',href=True)
-manga=lis[9]['href']
+manga=lis[7]['href']
 
 
 
