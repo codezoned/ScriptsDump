@@ -25,11 +25,11 @@ Simplified structure of *ScriptsDump*
 
 -**[Filters](Filters/src)**
 
--**[FTP Stuff](FTP Stuff/src)**
+-**[FTP Stuff](/FTP Stuff/src)**
 
--**[Machine Learning](/Machine Learning/)**
+-**[Machine Learning](/Machine Learning/src/)**
 
--**[Json Parser](Json Parser/src)**
+-**[Json Parser](/Json Parser/src)**
 
 
 
