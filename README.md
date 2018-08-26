@@ -17,19 +17,19 @@ ScriptsDump is a complete repository of all kind of scripts we and you can think
 ## Structure
 Simplified structure of *ScriptsDump*
 
--**[Sorting](/Arrays-Sorting/src)**
+* **[Sorting](/Arrays-Sorting/src)**
 
--**[Searching](/Arrays-searching/src)**
+* **[Searching](/Arrays-searching/src)**
 
--**[Automation](Automation/src)**
+* **[Automation](Automation/src)**
 
--**[Filters](Filters/src)**
+* **[Filters](Filters/src)**
 
--**[FTP Stuff](/FTP_Stuff/src)**
+* **[FTP Stuff](/FTP_Stuff/src)**
 
--**[Machine Learning](/Machine_Learning/src/)**
+* **[Machine Learning](/Machine_Learning/src/)**
 
--**[Json Parser](/Json_Parser/src)**
+* **[Json Parser](/Json_Parser/src)**
 
 
 
