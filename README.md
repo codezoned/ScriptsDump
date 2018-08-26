@@ -15,8 +15,24 @@
 ScriptsDump is a complete repository of all kind of scripts we and you can think of. Scripts written in any languages are welcomed but we at codezoned tend to lean towards **Python and Go** :wink:.
 
 ## Structure
+Simplified structure of *ScriptsDump*
 
-> Content before Structure ;)
+-**[Sorting](/Arrays-Sorting/src)**
+
+-**[Searching](/Arrays-searching/src)**
+
+-**[Automation](Automation/src)**
+
+-**[Filters](Filters/src)**
+
+-**[FTP Stuff](/FTP_Stuff/src)**
+
+-**[Machine Learning](/Machine_Learning/src/)**
+
+-**[Json Parser](/Json_Parser/src)**
+
+
+
 
 
 
