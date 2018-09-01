@@ -2,7 +2,7 @@
 
 clear all;
 
-%Setting the directory
+%Setting up the directory
 fpath1=fullfile('C:\Users\Manish (Master)\Desktop\images');  % Add your directory   
 addpath(fpath1);
 basefile=sprintf('*.png');                                   % Add format of image
@@ -27,7 +27,7 @@ for i = 1:length(fnames)
 
     % Conversion of GRAY-SCALE to BINARY IMAGE
     Binary_Image = imbinarize(Gray_Scale,'adaptive','ForegroundPolarity','dark','Sensitivity',0.4); 
-    % You can use different methods like instead of adaptive you can use global(by defauult).
+    % You can use different methods like instead of adaptive you can use global(by default).
     % Foreground Polarity can be dark or bright (refer documentaion for more info)
     % Sensitivity can be from 0 to 1 , by default it is 0.5
     figure
