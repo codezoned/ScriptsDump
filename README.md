@@ -34,11 +34,9 @@ We're always looking out for people who're enthusiastic to work and collaborate 
 
 **The current maintainers are:**
 
-- [Manish Kumar (master-fury)] (https://github.com/master-fury)
+- [Manish Kumar](https://github.com/master-fury)
 
-- [Senthil Kumar (Rats12)] (https://github.com/Rats12)
-
-
+- [Senthil Kumar (Rats12)]([https://github.com/Rats12](https://github.com/Rats12)
 
 ## Contributions
 
