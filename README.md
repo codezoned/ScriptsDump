@@ -1,18 +1,18 @@
 # Scripts Dump!
 
 > Your goto place to find and dump any script you want.
-> 
+>
 > **This is one of the first projects of codezoned, Show your :heart:**
-> 
+>
 > **[Make sure you join our community by clicking on this beautiful sentence](http://talk.codezoned.com) **
-> 
+>
 > or just visit http://talk.codezoned.com
 
 ScriptsDump is a complete repository of all kind of scripts we and you can think of. Scripts written in any languages are welcomed but we at codezoned tend to lean towards **Python and Go** :wink:.
 
 ## Structure
 
-Simplified structure of *ScriptsDump*
+>Simplified structure of *ScriptsDump*
 
 - **[Sorting](/Arrays-Sorting/src)**
 
@@ -20,13 +20,15 @@ Simplified structure of *ScriptsDump*
 
 - **[Automation](Automation/src)**
 
-- **[Filters](Filters/src)**
+- **[Image Processing](/Image_Processing/src)**
 
 - **[FTP Stuff](/FTP_Stuff/src)**
 
 - **[Machine Learning](/Machine_Learning/src/)**
 
 - **[Json Parser](/Json_Parser/src)**
+
+- **[Mathematical Algorithms](/Mathematical_Algorithms/src)**
 
 ## Maintainers
 
