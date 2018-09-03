@@ -1,5 +1,4 @@
-#by: shashank
-#armstrong number 
+# ARMSTRONG NUMBER BY SHASHANK
 
 num=int(input('Enter a Number:'))
 Sum=0
@@ -8,13 +7,13 @@ while (temp > 0):
     digit=temp%10
     Sum+=digit**3
     temp//=10
-   # print(digit,temp,Sum)
+   
     
 if (num == Sum):
-    print('armstrong')
+    print('Hurray! It is a Armstrong Number')
     
 else:
-    print('not armstrong')
+    print('Sorry! Try again, Its not a Armstrong Number')
 
 
 
