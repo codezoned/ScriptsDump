@@ -11,10 +11,6 @@ Has Log n time complexity.
 
 #Given a sorted array arr[] of size n and an element x to be searched in it. Return index of x if it is present in array else return -1.
 
-
-
-from bisect import bisect_left
- 
 def fibMonaccianSearch(arr, x, n):
      
     # Initialize fibonacci numbers 
