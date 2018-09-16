@@ -16,7 +16,7 @@ ScriptsDump is a complete repository of all kind of scripts we and you can think
 
 - **[Sorting](/Arrays-Sorting/src)**
 
-- **[Searching](/Arrays-searching/src)**
+- **[Searching](/Arrays-Searching/src)**
 
 - **[Automation](Automation/src)**
 
