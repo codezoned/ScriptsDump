@@ -1,40 +1,44 @@
 # Scripts Dump!
 
 > Your goto place to find and dump any script you want.
-
-
-
+>
 > **This is one of the first projects of codezoned, Show your :heart:**
-
+>
 > **[Make sure you join our community by clicking on this beautiful sentence](http://talk.codezoned.com) **
-
+>
 > or just visit http://talk.codezoned.com
 
-
-
-ScriptsDump is a complete repository of all kind of scripts we and you can think of. Scripts written in any languages are welcomed but we at codezoned tend to lean towards **Python and Go** :wink:.
+ScriptsDump is a complete repository of all kind of scripts we and you can think of. Scripts written in any languages are welcomed but we at codezoned tend to lean towards **Python and Go** :wink:.
 
 ## Structure
-Simplified structure of *ScriptsDump*
 
-* **[Sorting](/Arrays-Sorting/src)**
+>Simplified structure of *ScriptsDump*
 
-* **[Searching](/Arrays-searching/src)**
+- **[Sorting](/Arrays-Sorting/src)**
 
-* **[Automation](Automation/src)**
+- **[Searching](/Arrays-searching/src)**
 
-* **[Filters](Filters/src)**
+- **[Automation](Automation/src)**
 
-* **[FTP Stuff](/FTP_Stuff/src)**
+- **[Image Processing](/Image_Processing/src)**
 
-* **[Machine Learning](/Machine_Learning/src/)**
+- **[FTP Stuff](/FTP_Stuff/src)**
 
-* **[Json Parser](/Json_Parser/src)**
+- **[Machine Learning](/Machine_Learning/src/)**
 
+- **[Json Parser](/Json_Parser/src)**
 
+- **[Mathematical Algorithms](/Mathematical_Algorithms/src)**
 
+## Maintainers
 
+We're always looking out for people who're enthusiastic to work and collaborate with people. If you want to become a maintainer at ScriptsDump you can contact us support@codezoned.com
 
+**The current maintainers are:**
+
+- [Manish Kumar](https://github.com/master-fury)
+
+- [Senthil Kumar (Rats12)](https://github.com/Rats12)
 
 ## Contributions
 
