@@ -32,7 +32,7 @@ ScriptsDump is a complete repository of all kind of scripts we and you can think
 
 ## Maintainers
 
-We're always looking out for people who're enthusiastic to work and collaborate with people. If you want to become a maintainer at ScriptsDump youu can contact us support@codezoned.com
+We're always looking out for people who're enthusiastic to work and collaborate with people. If you want to become a maintainer at ScriptsDump you can contact us support@codezoned.com
 
 **The current maintainers are:**
 
