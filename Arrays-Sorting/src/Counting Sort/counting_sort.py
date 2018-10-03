@@ -1,3 +1,9 @@
+# Author: Omkar Pathak
+# Time Complexities:
+# Best Case: O(n + k), 
+# Average Case: O(n + k), 
+# Worst Case: O(n + k)
+
 def sort(_list):
     """
     counting sort algorithm
