@@ -1,14 +1,9 @@
-#needs polishing
-#Searches and downloads the top Manga result page by page from https://www.mangapanda.com
-#author- Senthil Kumar @Rats12
-
-
 import requests
 from bs4 import BeautifulSoup
 import os
 
 query = input('What manga would you like to search for?: ')
-website='https://www.mangareader.net' 
+website = 'https://www.mangareader.net' 
 
 def download_image(url, manga_name):
     response = requests.get(url)
