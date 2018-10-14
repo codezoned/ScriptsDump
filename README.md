@@ -8,7 +8,13 @@
 >
 > or just visit http://talk.codezoned.com
 
+## About
+
 ScriptsDump is a complete repository of all kind of scripts we and you can think of. Scripts written in any languages are welcomed but we at codezoned tend to lean towards **Python and Go** :wink:.
+
+## Contributers
+
+[![](https://sourcerer.io/fame/ionicc/codezoned/ScriptsDump/images/0)](https://sourcerer.io/fame/ionicc/codezoned/ScriptsDump/links/0)[![](https://sourcerer.io/fame/ionicc/codezoned/ScriptsDump/images/1)](https://sourcerer.io/fame/ionicc/codezoned/ScriptsDump/links/1)[![](https://sourcerer.io/fame/ionicc/codezoned/ScriptsDump/images/2)](https://sourcerer.io/fame/ionicc/codezoned/ScriptsDump/links/2)[![](https://sourcerer.io/fame/ionicc/codezoned/ScriptsDump/images/3)](https://sourcerer.io/fame/ionicc/codezoned/ScriptsDump/links/3)[![](https://sourcerer.io/fame/ionicc/codezoned/ScriptsDump/images/4)](https://sourcerer.io/fame/ionicc/codezoned/ScriptsDump/links/4)[![](https://sourcerer.io/fame/ionicc/codezoned/ScriptsDump/images/5)](https://sourcerer.io/fame/ionicc/codezoned/ScriptsDump/links/5)[![](https://sourcerer.io/fame/ionicc/codezoned/ScriptsDump/images/6)](https://sourcerer.io/fame/ionicc/codezoned/ScriptsDump/links/6)[![](https://sourcerer.io/fame/ionicc/codezoned/ScriptsDump/images/7)](https://sourcerer.io/fame/ionicc/codezoned/ScriptsDump/links/7)
 
 ## Structure
 
