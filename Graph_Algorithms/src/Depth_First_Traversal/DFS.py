@@ -13,7 +13,7 @@ def dfsHelper(current, graph, visited, visitFunc):
     if (visited[current]):
         return
     
-    visited[current] = True;
+    visited[current] = True
     
     visitFunc(current)
     
