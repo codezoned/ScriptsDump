@@ -1,4 +1,5 @@
 
+
 # the label is only used for the clustering algorithm
 class LabeledPoint:
 
@@ -17,9 +18,6 @@ class LabeledPoint:
 
     def __str__(self):
         return "label: " + str(self._label) + ", data: " + str(self._data)
-
-    def __eq__(self, other):
-        return isinstance(other, LabeledPoint) and (self._data == other._data)
 
     def __hash__(self):
         return hash(tuple(self._data))
@@ -66,12 +64,17 @@ class DBSCAN:
                 continue
             point.label = str(cluster_label)
             neighbors.remove(point)
-            for neighbor in neighbors:
-                if neighbor.label == "outlier" or neighbor.label == "undefined":
-                    neighbor.label = str(cluster_label)
-                else:
-                    continue
-                connected_components = set([c_c for c_c in data if self._dist_func(neighbor, c_c) <= self._eps])
-                if len(connected_components) >= self._min_pts:
-                    neighbors = neighbors.union(connected_components)
+            prev_size = 0
+            new_size = len(neighbors)
+            while prev_size < new_size:
+                prev_size = len(neighbors)
+                for neighbor in neighbors:
+                    if neighbor.label == "outlier" or neighbor.label == "undefined":
+                        neighbor.label = str(cluster_label)
+                    else:
+                        continue
+                    connected_components = set([c_c for c_c in data if self._dist_func(neighbor, c_c) <= self._eps])
+                    if len(connected_components) >= self._min_pts:
+                        neighbors = neighbors.union(connected_components)
+                new_size = len(neighbors)
             cluster_label += 1
