@@ -1,6 +1,7 @@
 """
    BINARY SEARCH
-   Written by @ammarmallik
+   Written By @searpheon - Arka
+   Fixed by @ammarmallik
 """
 
 
