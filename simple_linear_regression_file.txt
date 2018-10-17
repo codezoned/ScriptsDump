@@ -1,0 +1,60 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Aug  3 00:17:33 2018
+
+@author: AYUSH
+"""
+
+#SIMPLE LINEAR REGRESSION
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+
+# IMPORT DATASET
+dataset=pd.read_csv('Salary_Data.csv')        
+X = dataset.iloc[:, :-1].values
+Y= dataset.iloc[:, 1].values
+
+
+
+#SPLITING THE DATASET INTO TRAINING SET AND TEST SET
+from sklearn.cross_validation import train_test_split
+X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=1/3,random_state=0)
+
+
+"""
+#FEATURE SCAlING
+from sklearn.preprocessing import StandardScaler
+sc_X=StandardScaler()
+X_train=sc_X.fit_transform(X_train)
+X_test=sc_X.transform(X_test)
+"""
+#FITTING THE SIMPLE LINEAR REGRRESSION TO THE TRAINING SET
+from sklearn.linear_model import LinearRegression
+#object creation
+regressor=LinearRegression()
+#fit the method of this class from several methods
+regressor.fit(X_train,Y_train)
+
+#PREDICTING THE TEST RESULTS
+Y_pred=regressor.predict(X_test)
+
+#VISUALISING THE PREDICTION
+#hamari prediction line training data se kitni milti hai
+plt.scatter(X_train,Y_train,color='red')
+plt.plot(X_train,regressor.predict(X_train),color='blue')
+plt.title('SALARY VS EXPIRIENCE(TRAINING SET)')
+plt.xlabel('YEARS OF EXPIERIENCE')
+plt.ylabel('SALARY')
+plt.show()
+
+
+#hamari prediction line test data se kitni milti hai
+plt.scatter(X_test,Y_test,color='red')
+plt.plot(X_train,regressor.predict(X_train),color='blue')
+plt.title('SALARY VS EXPIRIENCE(TEST SET)')
+plt.xlabel('YEARS OF EXPIERIENCE')
+plt.ylabel('SALARY')
+plt.show()
+
