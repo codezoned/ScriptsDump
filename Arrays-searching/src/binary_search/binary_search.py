@@ -1,36 +1,36 @@
 """
-	Written By @searpheon - Arka
-	Updated By @nishantcoder97 - Nishant Nahata
-	BINARY SEARCH
+   BINARY SEARCH
+   Written By @searpheon - Arka
+   Fixed by @ammarmallik
 """
 
-"""
-	Condition: List should be sorted in ascending order
-"""
-def binary_search(item_list, item):
-	"""
-	param: list item_list: List to be searched
-	param: int item: Item to be searched for
-	returns: int index: Index of the first occurrence of item, or len(tem_list) if not found
-	"""
-	first = 0
-	last = len(item_list)-1 
-	index = len(item_list)
-	while first < last:
-		mid = int((first + last) / 2)
-		if item_list[mid] >= item:
-			last = mid
-		else:
-			first = mid + 1
-	if item_list[first] == item:
-		index = first
-	return index
 
+def binary_search(sorted_array, search_key):
+    """ Algorithm:
+            1. Search a sorted array by repeatedly dividing the search interval in half.
+            2. Begin with an interval covering the whole array.
+            3. If the value of the search key is less than the item in the middle of the interval,
+               narrow the interval to the lower half.
+            4. Otherwise narrow it to the upper half.
+            5. Repeatedly check until the value is found or the interval is empty.
+    """
+    if sorted_array:
+        first_index = 0
+        last_index = len(sorted_array) - 1
+        found = False
+        while first_index <= last_index and not found:
+            mid = (first_index + last_index) / 2
+            if sorted_array[mid] == search_key:
+                found = True
+                break
+            else:
+                if search_key < sorted_array[mid]:
+                    last_index = mid - 1
+                else:
+                    first_index = mid + 1
+        return found
+    return "Empty Array"
 
-if __name__ == '__main__':
-	   ### Tests ###
-	print(binary_search([1,2,3,5,8], 6)) # returns len(item_list)
-	print(binary_search([1,2,3,5,8], 5)) # returns 3
-	print(binary_search([1, 2, 3, 3, 3, 4, 4, 5, 10], 4)) # returns 5
-
-
+print(binary_search([], 0))
+print(binary_search([1, 2, 3, 5, 8], 6))
+print(binary_search([1, 2, 3, 5, 8], 5))
