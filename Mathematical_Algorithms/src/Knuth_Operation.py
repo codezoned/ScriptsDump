@@ -73,4 +73,4 @@ if __name__ == '__main__':
   try:
     knuth_operation(3, 5, -2)
   except ValueError:
-    print("[✔] 3 ↑^5 -2 correctly fails")
+    print("[✔] 3 ↑^(-2) 5 correctly fails")
