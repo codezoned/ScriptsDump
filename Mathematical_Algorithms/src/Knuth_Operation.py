@@ -68,9 +68,9 @@ if __name__ == '__main__':
     try:
       knuth_operation(**fail)
     except TypeError as e:
-      print("[✔] {base} ↑^{up_arrows} {power} correctly fails".format(**test))
+      print("[✔] {base} ↑^{up_arrows} {power} correctly fails".format(**fail))
 
   try:
     knuth_operation(3, 5, -2)
   except ValueError:
-    print("[✔] {base} ↑^{up_arrows} {power} correctly fails".format(**test))
+    print("[✔] 3 ↑^5 -2 correctly fails")
