@@ -14,6 +14,5 @@ def linear(a,ele):
 
 ##example run
 
-arr=[1,2,3,4,5,6]
-x=4
-print(linear(arr,x))
+
+print(linear([1,2,3,4,5,6,12,23],4))
