@@ -19,6 +19,7 @@ class LinearRegression:
 		return cost
 	
 
+
 	def gradient(self, x, y, n_weights, epochs):
 		m = len(y)
 		for i in range(epochs):
@@ -30,6 +31,12 @@ class LinearRegression:
 			if i % 10 == 0:
 				print("Loss of {}th epoch is {} ".format(i , model.cost_function(x, y, self.n_weights)))
 		return self.n_weights
+
+	def predict(self, x):
+		x=np.insert(x, 0 ,1)
+		print(x.T.dot(self.n_weights))
+
+
 
 	def plot(self):
 		plt.plot(self.loss_)
@@ -54,3 +61,4 @@ if __name__ == "__main__":
 	model.fit(x, y, learning_rate)
 	print("Plotting loss")
 	model.plot()
+	model.predict(np.array([45,48]))
