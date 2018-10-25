@@ -38,11 +38,11 @@ def find_and_replace():
         print(e.strerror)
 
     for file in sourcepath:
-        inputfile = source + file
+        inputfile = os.path.join(source, file)
         print ('Conversion is ongoing for: ' + inputfile)
         with open(inputfile,'r', encoding='utf-8') as inputfile:
             filedata = inputfile.read()
-        destinationpath = destination + file
+        destinationpath = os.path.join(destination, file)
         filedata = filedata.replace(find, replace)
         try:
             with open(destinationpath,'w', encoding='utf-8') as file:
