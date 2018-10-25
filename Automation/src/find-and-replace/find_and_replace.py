@@ -3,12 +3,12 @@
 import os
 
 def input_find():
-    print('String do you want to replace: ')
+    print('String you want to replace: ')
     find = input()
     return find
 
 def input_replace():
-    print('String do you want to replace it with: ')
+    print('String you want to replace it with: ')
     replace = input()
     return replace
 
@@ -27,9 +27,15 @@ def find_and_replace():
     find = input_find()
     replace = input_replace()
     source = input_source()
-    sourcepath = os.listdir(source)
     destination = input_destination()
     i = 0
+
+    try:
+        sourcepath = os.listdir(source)
+    except OSError as e:
+        print(e.errno)
+        print(e.filename)
+        print(e.strerror)
 
     for file in sourcepath:
         inputfile = source + file
@@ -38,9 +44,14 @@ def find_and_replace():
             filedata = inputfile.read()
         destinationpath = destination + file
         filedata = filedata.replace(find, replace)
-        with open(destinationpath,'w', encoding='utf-8') as file:
-            file.write(filedata)
-        i += 1
+        try:
+            with open(destinationpath,'w', encoding='utf-8') as file:
+                file.write(filedata)
+            i += 1
+        except OSError as e:
+            print(e.errno)
+            print(e.filename)
+            print(e.strerror)
 
     print ('Total %d Records Replaced' %i)
 
