@@ -1,4 +1,4 @@
-#Simple Fibonacci
+// Simple Fibonacci
 
 package main
 
