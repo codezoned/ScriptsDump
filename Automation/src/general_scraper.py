@@ -14,7 +14,7 @@ class Scraper:
 	    headers = {'User-Agent': ua_one + ua_two}
 	    return headers
 
-	def get_piece(self, element, attribute, attribute_name, operation=None):
+	def get_piece(self, element, attribute, attribute_name=None, operation=None):
 		header = Scraper.headers() if self.headers == None else self.headers
 		parser = 'lxml' if self.parser == None else self.parser
 		soup = bs(get(self.url, headers=header).text, parser)
