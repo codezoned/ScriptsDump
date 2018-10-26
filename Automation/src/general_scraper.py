@@ -28,4 +28,4 @@ def lprint(this):
 	for i in this:
 		print(i.img)
 
-Scraper('https://www.elfenix.com/').get_piece("div", "class", "coleql_height", operation=lprint)
+Scraper('https://www.elfenix.com/').get_piece("div", attribute="class", attribute_name="coleql_height", operation=lprint)
