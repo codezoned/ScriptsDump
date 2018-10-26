@@ -1,0 +1,24 @@
+
+def numGradient(f, x, h=10**-6):
+   import numpy as np
+   '''
+   Input:
+      -f objective function
+      -x cordinates
+      -h numerical perturbation
+   '''
+   n=len(x)
+   g=[0] * n 
+   
+   for i in range(n):
+       e=[0] * n
+       e[i]=1
+       g[i]=(f(x + np.dot(e,h)) - f(x - np.dot(e,h))) / (2 * h)
+   return g    
+   
+def f(x):
+    return x[0]**2 + 4 * x[1]
+
+x=[3,8]
+
+numGradient(f, x)
