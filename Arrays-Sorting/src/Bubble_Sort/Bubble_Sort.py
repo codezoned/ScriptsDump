@@ -11,8 +11,8 @@ def Bubble_Sort(arr):
 
 
 #Driver Code
-A=[1,34,21,345,765,44,67,32]    #Your array
-res=Bubble_Sort(A)
+ #Your array
+res=Bubble_Sort([1,34,21,345,765,44,67,32])
 print(res)
 
 
