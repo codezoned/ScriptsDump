@@ -1,6 +1,7 @@
 import tensorflow as tf
 import random
 import os
+os.environ["CUDA_VISIBLE_DEVICES"]="1"
 import cv2
 import numpy as np
 import scipy.misc 
@@ -11,11 +12,11 @@ import matplotlib.pyplot as plt
 
 slim = tf.contrib.slim
 
-HEIGHT, WIDTH, CHANNEL = 64, 64, 3
+HEIGHT, WIDTH, CHANNEL = 64, 64, 3 #The size and channel of the image, this one is RGB with 64x64 [64,64,3]
 BATCH_SIZE = 9
 EPOCH = 5000
-version = 'newAnime'
-newPoke_path = './' + version
+data = 'image'
+new_path = './' + data
 
 
 def lrelu(x, n, leak=0.2):
@@ -56,11 +57,11 @@ def imsave(images, size, path):
     
 def process_data():
 	cur_dir = os.getcwd()
-	file_dir = os.path.join(cur_dir,'data/image')
+	file_dir = os.path.join(cur_dir,'data/image')#The folder where the images are
 	images=[]
 	for pic in os.listdir(file_dir):
 		images.append(os.path.join(file_dir,pic))
-	dataset = tf.convert_to_tensor(images,dtype=tf.string)
+	dataset = tf.convert_to_tensor(images,dtype=tf.string)#Processing the image 
 	images_queue = tf.train.slice_input_producer([dataset])
 	data = tf.read_file(images_queue[0])
 	image = tf.image.decode_jpeg(data,channels=CHANNEL)
@@ -82,9 +83,8 @@ def process_data():
 	return images_batch, num_images
 	
 
-def generator(input,input_dim,is_train,reuse=False):
-	c1 ,c2, c3, c4, c5 = 512, 256, 128, 64, 32  # numero de canal
-	s4 = 1
+def generator(input,input_dim,is_train,reuse=False):#The generator model
+	c1 ,c2, c3, c4, c5 = 512, 256, 128, 64, 32  # number of channels
 	output_dim = CHANNEL  # RGB image
 	with tf.variable_scope('gen') as scope:
 		if reuse:
@@ -125,7 +125,7 @@ def generator(input,input_dim,is_train,reuse=False):
 		return output_act
 
 
-def discriminator(input,is_train,reuse=False):
+def discriminator(input,is_train,reuse=False):#The discriminator model
 	c1,c2,c3,c4 = 64, 128, 256, 512 
 	
 	with tf.variable_scope("discriminator") as scope:
@@ -204,8 +204,8 @@ def train():
 	saver = tf.train.Saver()
 	sess.run(tf.global_variables_initializer())
 	sess.run(tf.local_variables_initializer())
-	save_path = saver.save(sess, "tmp/model2.ckpt")
-	ckpt = tf.train.latest_checkpoint(version)
+	save_path = saver.save(sess, "tmp/model.ckpt")
+	ckpt = tf.train.latest_checkpoint(data)
 	saver.restore(sess, save_path)
 	coord = tf.train.Coordinator()
 	threads = tf.train.start_queue_runners(sess=sess, coord=coord)
@@ -237,14 +237,14 @@ def train():
 				_, gLoss = sess.run([trainer_g, g_loss],
                                     feed_dict={input_fake: train_noise, is_train: True})
 		    
-		if i % 30 == 0:
-			if not os.path.exists('model/' + version):
-				os.makedirs('model/' + version)
-			saver.save(sess, 'model/' + version + '/' + str(i))
-		if i % 10 == 0:
+		if i % 30 == 0:#Each 30 epochs
+			if not os.path.exists('model/' + data):
+				os.makedirs('model/' + data)
+			saver.save(sess, 'model/' + data + '/' + str(i))
+		if i % 10 == 0:#Each 10 epochs:
            	# save images
-			if not os.path.exists(newPoke_path):
-				os.makedirs(newPoke_path)
+			if not os.path.exists(new_path):
+				os.makedirs(new_path)
 			sample_noise = np.random.uniform(-1.0, 1.0, size=[batch_size, input_dim]).astype(np.float32)
 			imgtest = sess.run(fake_image, feed_dict={input_fake: sample_noise, is_train: False})
 		# imgtest = imgtest * 255.0
