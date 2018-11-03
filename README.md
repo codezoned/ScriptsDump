@@ -1,8 +1,10 @@
-# Scripts Dump!
+# **Scripts Dump!**
 
 > Your goto place to find and dump any script you want.
 >
 > **This is one of the first projects of codezoned, Show your :heart:**
+>
+> **[Visit our official website by clicking here.](http://www.codezoned.com)**
 >
 > **[Make sure you join our community by clicking on this beautiful sentence](http://talk.codezoned.com) **
 >
@@ -26,6 +28,10 @@ ScriptsDump is a complete repository of all kind of scripts we and you can think
 
 - **[Automation](Automation/src)**
 
+- **[Cryptography](Cryptography/src)**
+
+- **[Downloaders](Downloaders/src)**
+
 - **[Image Processing](/Image_Processing/src)**
 
 - **[FTP Stuff](/FTP_Stuff/src)**
@@ -35,6 +41,10 @@ ScriptsDump is a complete repository of all kind of scripts we and you can think
 - **[Json Parser](/Json_Parser/src)**
 
 - **[Mathematical Algorithms](/Mathematical_Algorithms/src)**
+
+- **[Graph Algorithms](/graph_algorithms/src)**
+
+
 
 ## Maintainers
 
