@@ -42,7 +42,7 @@ ScriptsDump is a complete repository of all kind of scripts we and you can think
 
 - **[Mathematical Algorithms](/Mathematical_Algorithms/src)**
 
-- **[Graph Algorithms](/graph_algorithms/src)**
+- **[Graph Algorithms](/Graph_Algorithms/src)**
 
 
 
