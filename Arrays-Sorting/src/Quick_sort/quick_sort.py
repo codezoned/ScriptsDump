@@ -1,44 +1,37 @@
-def quickSort(alist):
-   quickSortHelper(alist,0,len(alist)-1)
+def quickSort(arr):
+    """Apply quick sort on the given array
 
-def quickSortHelper(alist,first,last):
-   if first<last:
+    :param arr: the array to sort
+    :type arr: list
+    """
+    less = []
+    pivotList = []
+    more = []
+    if len(arr) <= 1:
+        return arr
+    else:
+        pivot = arr[0]
+        for i in arr:
+            if i < pivot:
+                less.append(i)
+            elif i > pivot:
+                more.append(i)
+            else:
+                pivotList.append(i)
+        less = quickSort(less)
+        more = quickSort(more)
+        return less + pivotList + more
 
-       splitpoint = partition(alist,first,last)
+# Unit test
+a = [4, 65, 2, -31, 0, 99, 83, 782, 1]  # The array to sort
+a = quickSort(a)
+assert all(a[i] <= a[i+1] for i in range(len(a)-1))  # Assert array is sorted
 
-       quickSortHelper(alist,first,splitpoint-1)
-       quickSortHelper(alist,splitpoint+1,last)
-
-
-def partition(alist,first,last):
-   pivotvalue = alist[first]
-
-   leftmark = first+1
-   rightmark = last
-
-   done = False
-   while not done:
-
-       while leftmark <= rightmark and alist[leftmark] <= pivotvalue:
-           leftmark = leftmark + 1
-
-       while alist[rightmark] >= pivotvalue and rightmark >= leftmark:
-           rightmark = rightmark -1
-
-       if rightmark < leftmark:
-           done = True
-       else:
-           temp = alist[leftmark]
-           alist[leftmark] = alist[rightmark]
-           alist[rightmark] = temp
-
-   temp = alist[first]
-   alist[first] = alist[rightmark]
-   alist[rightmark] = temp
-
-
-   return rightmark
-
-alist = [54,26,93,17,77,31,44,55,20]
-quickSort(alist)
-print(alist)
+# Quick sort: Quicksort is a comparison sort, meaning that it can 
+# sort items of any type for which a "less-than" relation is defined. 
+# In efficient implementations it is not a stable sort, meaning 
+# that the relative order of equal sort items is not preserved. 
+# Quicksort can operate in-place on an array, requiring small 
+# additional amounts of memory to perform the sorting. It is very 
+# similar to selection sort, except that it does not always choose 
+# worst-case partition.
