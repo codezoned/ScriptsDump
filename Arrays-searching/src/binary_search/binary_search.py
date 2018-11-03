@@ -19,7 +19,7 @@ def binary_search(sorted_array, search_key):
         last_index = len(sorted_array) - 1
         found = False
         while first_index <= last_index and not found:
-            mid = (first_index + last_index) / 2
+            mid = (first_index + last_index) // 2
             if sorted_array[mid] == search_key:
                 found = True
                 break
