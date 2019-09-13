@@ -1,12 +1,19 @@
 #read an unsorted array 
+
 a=[9,4,3,8,2,5]
+
 #len(a) gives us the length of the array 'a'
+
 n=len(a)
+
 #initializing min,pos,temp variables
+
 min=a[0]
 pos=0
 temp=0
+
 #creating a loop for finding the smallest element in the array
+
 for i in range(0,n-1):
 	min=a[i]
 	pos=i
@@ -16,9 +23,14 @@ for i in range(0,n-1):
 		if a[j]<min:
 			min=a[j]
 			pos=j
+			
 	#swapping the smallest number with a greater element in the loop		
+	
 	temp=a[i]
 	a[i]=a[pos]
 	a[pos]=temp
+	
 #printing the sorted array
+
 print(a)
+
