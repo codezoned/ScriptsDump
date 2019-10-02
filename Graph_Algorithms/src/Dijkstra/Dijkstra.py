@@ -13,7 +13,7 @@ class Graph:
     self.distances[(from_node, to_node)] = distance
 
 
-def dijsktra(graph, initial):
+def dijkstra(graph, initial):
   visited = {initial: 0}
   path = {}
 
