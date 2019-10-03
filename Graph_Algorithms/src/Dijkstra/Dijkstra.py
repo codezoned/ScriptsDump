@@ -1,3 +1,6 @@
+from collections import defaultdict
+import math
+
 class Graph:
   def __init__(self):
     self.nodes = set()
@@ -35,7 +38,10 @@ def dijkstra(graph, initial):
     current_weight = visited[min_node]
 
     for edge in graph.edges[min_node]:
-      weight = current_weight + graph.distance[(min_node, edge)]
+      try:
+          weight = current_weight + graph.distances[(min_node, edge)]
+      except:
+          weight = current_weight + math.inf
       if edge not in visited or weight < visited[edge]:
         visited[edge] = weight
         path[edge] = min_node
@@ -43,8 +49,22 @@ def dijkstra(graph, initial):
   return visited, path
 
 
-def init_values():
-    count = input('How many nodes would you like to add?\n')
-    graph = Graph()
+def main():
 
-init_values()
+    #initializing values
+    g = Graph()
+    g.add_node('a')
+    g.add_node('b')
+    g.add_node('c')
+    g.add_node('d')
+
+    g.add_edge('a', 'b', 10)
+    g.add_edge('b', 'c', 2)
+    g.add_edge('a', 'c', 1)
+    g.add_edge('c', 'd', 1)
+    g.add_edge('b', 'd', 8)
+
+    #output
+    print(dijkstra(g, 'a'))
+
+main()
