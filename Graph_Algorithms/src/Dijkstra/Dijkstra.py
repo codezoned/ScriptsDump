@@ -18,7 +18,6 @@ class Graph:
 
 def dijkstra(graph, initial):
   visited = {initial: 0}
-  path = {}
 
   nodes = set(graph.nodes)
 
@@ -44,9 +43,8 @@ def dijkstra(graph, initial):
           weight = current_weight + math.inf
       if arch not in visited or weight < visited[arch]:
         visited[arch] = weight
-        path[arch] = min_node
 
-  return visited, path
+  return visited
 
 
 def main():
