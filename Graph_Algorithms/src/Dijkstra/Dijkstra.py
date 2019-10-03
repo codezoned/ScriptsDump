@@ -4,16 +4,16 @@ import math
 class Graph:
   def __init__(self):
     self.nodes = set()
-    self.edges = defaultdict(list)
-    self.distances = {}
+    self.archs = defaultdict(list)
+    self.values = {}
 
   def add_node(self, value):
     self.nodes.add(value)
 
-  def add_edge(self, from_node, to_node, distance):
-    self.edges[from_node].append(to_node)
-    self.edges[to_node].append(from_node)
-    self.distances[(from_node, to_node)] = distance
+  def add_edge(self, init_node, final_node, value):
+    self.archs[init_node].append(final_node)
+    self.archs[init_node].append(final_node)
+    self.values[(init_node, final_node)] = value
 
 
 def dijkstra(graph, initial):
@@ -37,14 +37,14 @@ def dijkstra(graph, initial):
     nodes.remove(min_node)
     current_weight = visited[min_node]
 
-    for edge in graph.edges[min_node]:
+    for arch in graph.archs[min_node]:
       try:
-          weight = current_weight + graph.distances[(min_node, edge)]
+          weight = current_weight + graph.values[(min_node, arch)]
       except:
           weight = current_weight + math.inf
-      if edge not in visited or weight < visited[edge]:
-        visited[edge] = weight
-        path[edge] = min_node
+      if arch not in visited or weight < visited[arch]:
+        visited[arch] = weight
+        path[arch] = min_node
 
   return visited, path
 
