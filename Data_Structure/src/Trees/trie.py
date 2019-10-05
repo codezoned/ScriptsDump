@@ -1,8 +1,9 @@
 """
 Trie implementation in Python by @Tr-Jono
 
-A trie is a type of tree that is typically used for the storage of strings.
-The strings "ab", "ac", "ace", "ba", "boom" in a trie would look like
+A trie is a type of search tree that is used for storing strings.
+Visual representation of a trie with strings "ab", "ac", "ace", "ba", "boom":
+
       [root]
       /    \
    "a"     "b"
@@ -12,6 +13,16 @@ The strings "ab", "ac", "ace", "ba", "boom" in a trie would look like
      "e"     "o"
               |
              "m"
+
+The time complexities of addition, removal and querying existence/count of a string are all O(|target string|).
+
+A trie could be used in place of a string list used for searching.
+Time complexity of searching a string in:
+    - a list: O(|list|)
+    - a trie: O(|target string|)
+
+This implementation of the trie relies on recursively stored _TrieNode instances.
+The Trie class, acting as the root, implements typical data structure methods.
 """
 
 
