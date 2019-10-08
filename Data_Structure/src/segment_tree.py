@@ -1,3 +1,14 @@
+'''
+Segment Tree is used for storing information about intervals, or segments. 
+It allows querying which of the stored segments contain a given point.
+
+A segment tree for a set I of n intervals uses O(n log n) storage and can be built in O(n log n) time. 
+Segment trees support searching for all the intervals that contain a query point in O(log n + k), 
+k being the number of retrieved intervals or segments.
+\cite{https://en.m.wikipedia.org/wiki/Segment_tree }
+'''
+
+
 from typing import TypeVar, List, Callable
 from functools import reduce
 
