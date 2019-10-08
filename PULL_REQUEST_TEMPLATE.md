@@ -3,6 +3,13 @@
 
 Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. Include a proper title of the Script that is being entered.
 
+Make sure you have:
+
+- [ ] Starred ScriptsDump!
+- [ ] Referred the issue number in the fixes title below.
+- [ ] Made a PR in Join_codezoned.
+- [ ] Join our discord server.
+
 Fixes # (issue)
 
 ## Type of change
