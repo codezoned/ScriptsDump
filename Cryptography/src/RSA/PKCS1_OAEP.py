@@ -4,6 +4,12 @@ from Crypto.Cipher import PKCS1_OAEP
 # You can use PKCS1_v1_5 mode just by replaceing PKCS1_OAEP with PKCS1_v1_5
 import base64
 
+# RSA involves a public key and private key.
+# It is used to encrypt messages.
+# The public key can be known to everyone; and
+# messages encrypted using the public key can
+# only be decrypted with the private key.
+
 
 def do_encrypt(string_to_encrypt):
     bytes_to_encrypt = string_to_encrypt.encode("utf-8")
