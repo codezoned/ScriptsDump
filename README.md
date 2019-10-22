@@ -6,7 +6,7 @@
 >
 > **[Visit our official website by clicking here.](http://www.codezoned.com)**
 >
-> **[Make sure you join our community by clicking on this beautiful sentence](http://talk.codezoned.com) **
+> **[Make sure you join our community by clicking on this beautiful sentence](http://join.codezoned.com) **
 >
 > or just visit http://talk.codezoned.com
 
