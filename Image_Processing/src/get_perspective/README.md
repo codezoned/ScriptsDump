@@ -1,5 +1,7 @@
 # Perspective Transform
 using OpenCV methods
+## How It Works
+On selecting dimensions for a quadrilateral section, the code finds the maximum height and width of that selection and warps the selected area into a rectangle of dimensions `maxHeight * maxWidth`
 ## Usage
 `python3 script.py --path image.jpg`
 
