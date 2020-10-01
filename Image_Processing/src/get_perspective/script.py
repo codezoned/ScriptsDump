@@ -25,6 +25,7 @@ def transform(img, arr):
        heightB = np.sqrt(((tl[0] - bl[0]) ** 2) + ((tl[1] - bl[1]) ** 2))
        h = max(int(heightA), int(heightB))
 
+       print("New Image Dimensions: \nWidth = {}\nHeight = {}".format(w,h))
        # Create source and destination points
        inp_pts = np.float32(arr)
        op_pts = np.float32([[0,0],[w-1,0],[w-1,h-1],[0,h-1]])
