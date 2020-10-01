@@ -1,3 +1,12 @@
+"""
+This file describes implementation of a basic CNN made using Tensorflow and trained and tested with MNIST dataset.
+Initially we have all the required dependencies imported.
+
+create_model() describes the CNN architecture used for training a model
+
+plot() is used to plot the images along with their predicted/true labels.
+
+"""
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
@@ -54,5 +63,7 @@ y_predictions = my_model.predict_classes(x_test)
 
 subset_x = x_test[0:10]
 subset_y = y_predictions[0:10]
+
+# Used to plot the predicted labels along with images.
 plot(subset_x, subset_y)
 
