@@ -23,3 +23,11 @@ Moves the pointer to the uTorrent icon in 3s
 pyautogui.click((1253,417), clicks=2)
 ```
 Opens uTorrent application in 2 automated clicks of the left mouse button 
+
+See how it works from the gifs below:
+### navigate to icon automatically
+![Navigate to icon automatically](https://github.com/lopeselio/ScriptsDump/blob/Elio/Automation/src/Screenshots_and_image_recognition_using_pyautogui/navigate.gif)
+
+### click on icon
+![click icon to open the application](https://github.com/lopeselio/ScriptsDump/blob/Elio/Automation/src/Screenshots_and_image_recognition_using_pyautogui/click.gif)
+
