@@ -7,37 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1uzsV3u4ebe8_S26ArFeF-mQpYNneHgjt
 """
 
-! pip3 install -q kaggle
-
-from google.colab import files
-files.upload()
-
-! mkdir ~/.kaggle
-
-! cp kaggle.json ~/.kaggle/
-
-! chmod 600 ~/.kaggle/kaggle.json
-
-! kaggle datasets list
-
-! kaggle datasets download -d paultimothymooney/chest-xray-pneumonia
-
-!ls
-
-
-
-!ls
-
-! rm -rf chest-xray-pneumonia.zip
-
-!ls
-
-!ls chest_xray/
-
-!ls
-
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
