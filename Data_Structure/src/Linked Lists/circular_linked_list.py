@@ -1,3 +1,10 @@
+#Another python program to implement and Insert a node by taking an pointer pointing to locations one want to insert a node to. 
+#The insertion operations are carried out: 
+#a. in empty linked list
+#b. at beginning of the linked  list
+#c. at end of the linked list
+#d. in between the nodes
+
 class Node: 
 
     def init(self, data): 
