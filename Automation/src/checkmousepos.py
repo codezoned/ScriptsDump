@@ -1,5 +1,10 @@
 #! python3
+# Author : Brent Zoomers, 4/10/'20
+
+# Program prints out current mouse position in console.
+
 import pyautogui, sys
+
 print('Press Ctrl-C to quit.')
 try:
     while True:
