@@ -1,4 +1,6 @@
-# Recursive function to search x in arr[l..r]  
+# Recursive function to search x in arr[l..r]
+# Another python program to search an element linearly in an array using Recursion (Read again 💯 ) 
+#Why recursion? Because it makes the task easier and reduces time complexity.
 def rec_search( arr, l, r, x): 
     if r < l: 
         return -1
