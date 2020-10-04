@@ -1,5 +1,8 @@
 
 #Python Program to implement Odd-Even / Brick Sort 
+#A python program to implement odd-even sorting or Brick Sort. 
+#It is a kind of bubble sort since it is divided into two phases, 
+#i.e. odd phase & even phase and bubble sort is implemented on each of the phases.
 def oddEvenSort(arr, n): 
     isSorted = 0 
     while isSorted == 0: 
