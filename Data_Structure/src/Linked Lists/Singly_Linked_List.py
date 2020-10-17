@@ -5,21 +5,23 @@ Created on Thu Oct  3 15:13:10 2019
 @author: mishr
 """
 
-#Singly Linked List 
+#Singly Linked List
+#Node class 
 
 class Node:
-    
+    # Function to initialise the node object 
     def __init__(self, data=None, next_node=None):
         self.data = data
         self.next_node = next_node
         
-    
+    # Linked List class contains a Node object
         
 class singly_linked_list:
+     # Function to initialize head 
     def __init__(self):
-        
         self.head = Node()
-    
+        
+     # Functio to insert a new node
     def append(self, data):
         
         new_node = Node(data)
@@ -27,17 +29,19 @@ class singly_linked_list:
         while current.next_node != None:
             current = current.next_node
         current.next_node = new_node
-    
+        
+     # Functio to know the length of the linked list
     def length(self):
         
         current = self.head
-        counter = 0
+        count = 0
         while current.next_node != None:
-            counter += 1
+            count += 1
             current = current.next_node
         
-        return counter
+        return count
     
+     # Functio to get value at a position in the linked list
     def get_value_at(self, index):
         
         if index >= self.length():
@@ -51,6 +55,7 @@ class singly_linked_list:
                 return current_node.data
             current_index += 1
         
+         # Functio to delete the node in the linked list
     def delete_at(self, index):
         
         if index >= self.length():
@@ -65,7 +70,8 @@ class singly_linked_list:
                 last_node.next_node = current_node.next_node
                 return
             current_index += 1
-            
+             
+                 # Functio to traverse and show the linked list
     def display(self):
         
         node_list = []
