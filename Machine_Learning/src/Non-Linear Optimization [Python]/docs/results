@@ -1,0 +1,5 @@
+Method          Iterations      Result
+CG              11              (0.9995053, 0.9990086)
+Newton          14              (1.0000000, 1.0000000)
+Quasi Newton    21              (1.0000000, 1.0000000)
+
