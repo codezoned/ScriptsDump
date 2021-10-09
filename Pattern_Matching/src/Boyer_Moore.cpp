@@ -8,25 +8,25 @@ using namespace std;
 # define NO_OF_CHARS 256
 
 // The preprocessing function for Boyer Moore's
-// bad character heuristic
-void badCharacter( string str, int size, int badchar[NO_OF_CHARS])
+// bad Character function
+void badCharacter( string str, int size, int badChar[NO_OF_CHARS])
 {
 	// Fill the last occurrence of a character
 	for (int i = 0; i < size; i++)
-		badchar[(int) str[i]] = i;
+		badChar[(int) str[i]] = i;
 }
 
 /* A pattern searching function that uses Bad
-Character Heuristic of Boyer Moore Algorithm */
+Character function of Boyer Moore Algorithm */
 void search( string txt, string pat)
 {
 	int m = pat.size();
 	int n = txt.size();
 
-	int badchar[NO_OF_CHARS]={-1};
+	int badChar[NO_OF_CHARS]={-1};
 
-	/* Fill the bad character array by function badCharHeuristic() for given pattern */
-	badCharacter(pat, m, badchar);
+	/* Fill the bad character array by function badChar() for given pattern */
+	badCharacter(pat, m, badChar);
 
 	int s = 0; // s is shift of the pattern with respect to text
 
@@ -53,7 +53,7 @@ void search( string txt, string pat)
 			The condition s+m < n is necessary for
 			the case when pattern occurs at the end
 			of text */
-			s += (s + m < n)? m-badchar[txt[s + m]] : 1;
+			s += (s + m < n)? m-badChar[txt[s + m]] : 1;
 
 		}
 
@@ -66,7 +66,7 @@ void search( string txt, string pat)
 			occurrence of bad character in pattern
 			is on the right side of the current
 			character. */
-			s += max(1, j - badchar[txt[s + j]]);
+			s += max(1, j - badChar[txt[s + j]]);
 	}
 }
 
@@ -79,7 +79,7 @@ int main()
 	return 0;
 }
 
-//#description
+//description
 //Boyer Moore algorithm starts matching from the last character of the pattern
 //It preprocesses the pattern and creates different arrays for last occurrence of each of the characters in string .
-// At every step, it slides the pattern by the max of the slides suggested .
+//At every step, it slides the pattern by the max of the slides suggested .
