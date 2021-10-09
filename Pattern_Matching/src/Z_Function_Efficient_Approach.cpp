@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 //fuction to calculate z array/vector.
+//O(N+m) N,m are length of text and patterns respectively.
 vector<int> Z_array(string s)
 {
 
