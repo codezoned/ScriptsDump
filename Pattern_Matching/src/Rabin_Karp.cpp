@@ -1,7 +1,7 @@
-//#Rapin karp pattern searching algorithm
-//#Best and average time complexity - O(n+m)
-//#Worst case time complexity [O(nm)] when all characters of pattern and text are same
-// as the hash values of all the substrings of txt[] match with hash value of pat[]
+//Rapin karp pattern searching algorithm
+//Best and average time complexity - O(n+m)
+//Worst case time complexity [O(nm)] when all characters of pattern and text are same
+//as the hash values of all the substrings of txt[] match with hash value of pat[]
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -72,7 +72,7 @@ int main()
     return 0;
 }
 
-//#Description
+//Description
 //Rabin karp is one of the efficient algorithm for pattern searching.
 //It uses the concept that calculate the hashvalue for pattern
 //Also calculate for substring of m characters and equate it with that of pattern one
