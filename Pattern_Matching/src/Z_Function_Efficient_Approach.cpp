@@ -16,7 +16,8 @@ vector<int> Z_array(string s)
         while (i + z_array[i] < n && s[z_array[i]] == s[i + z_array[i]])
         //for maching characters we have to increase our range of segment and update the z_array
             z_array[i]++;
-        if (i + z_array[i] - 1 > es)   //already processed
+        if (i + z_array[i] - 1 > es)   
+            //if we have already processed then we have to use prevoius value
             //for maintaining the condition l<=i<=r<=n ;
             ss = i, es = i + z_array[i] - 1;
     }
