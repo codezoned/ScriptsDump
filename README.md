@@ -54,7 +54,7 @@ We're always looking out for people who're enthusiastic to work and collaborate 
 
 - [Manish Kumar](https://github.com/master-fury)
 
-- [Senthil Kumar (Rats12)](https://github.com/Rats12)
+- [Senthil Kumar (Rats12)](https://github.com/senthilkumar1729)
 
 ## Contributions
 
