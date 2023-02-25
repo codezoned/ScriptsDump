@@ -1,4 +1,4 @@
-   def palindrome(string):
+def palindrome(string):
     #returns True if word/number is a palindrome and False otherwise
     string = str(string)
     import math
