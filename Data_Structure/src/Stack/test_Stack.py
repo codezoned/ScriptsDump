@@ -1,4 +1,5 @@
-
+import pytest
+from stack import Stack
 def test_push():
     # Créer une pile de taille 2
     s = Stack(2)
