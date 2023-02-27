@@ -1,29 +1,27 @@
-#importing libraries
 import string
 import random
 
-#main
-def GeneratePassword (passLength):
-    password = string.ascii_letters + string.digits + "!@#$%^&*()_+=-./?><|\}{[]"
-    ''' Generating characters, numbers and letters for password
-        Use the string constant string.ascii_letters to get all the  lower and upper case letters.
-    '''
+# main
+def GeneratePassword(passLength):
+    password = string.ascii_letters + string.digits + "!@#$%^&*()_+=-./?><|}{[]"
     passwordList = []
-    #password list is for putting all the selected password units into a string and show them to user
     for passChar in range(passLength):
-        passRandom = random.choice(password) #The random.choice() function is used to choose a single item from any sequence.
-        passwordList.append(passRandom) # appends the randomly picked character from password. 
-
-    finalOutput = "".join(passwordList) # if password length == user's desired poass length returns password. 
+        passRandom = random.choice(password)
+        passwordList.append(passRandom)
+    finalOutput = "".join(passwordList)
     return finalOutput
 
-import CreatePasswords as MyPassword
-
-while 1:
-    userPasswordLength = int(input("Enter Length For Your Password: \n"))
-    print(MyPassword.GeneratePassword(userPasswordLength))
-    userReply = input("Do You Want More? (y,n): ")
-    if userReply.lower() == "y" :
-        continue
-    elif userReply.lower() == "n":
-        break
+if __name__ == "__main__":
+    while True:
+        try:
+            userPasswordLength = int(input("Enter Length For Your Password: \n"))
+        except ValueError:
+            print("Invalid input. Please enter an integer.")
+            continue
+        print(GeneratePassword(userPasswordLength))
+        user_reply = input("Do You Want More? (y/n): ")
+        if user_reply.lower() == "y":
+            continue
+        elif user_reply.lower() == "n":
+            break
+ 
