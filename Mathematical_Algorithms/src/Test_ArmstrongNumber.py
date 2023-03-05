@@ -4,3 +4,5 @@ def test_armstrongnumber():
     assert armstrongnumber(153) == True
     assert armstrongnumber(371) == True
     assert armstrongnumber(65) == False
+    assert armstrongnumber(1420) == False
+
