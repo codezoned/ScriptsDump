@@ -1,5 +1,5 @@
-   def palindrome(string):
-    #returns True if word/number is a palindrome and False otherwise
+def palindrome(string):
+    print(string)
     string = str(string)
     import math
     l = len(string)
@@ -13,6 +13,3 @@
 
     return(second_half_rev == first_half)
     
-palindrome("wasitacatisaw")
-palindrome("12344321")
-palindrome(1234214321)
